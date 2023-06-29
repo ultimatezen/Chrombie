@@ -1,15 +1,19 @@
 {
   "name": "headless-horseman",
   "version": "2.0.0",
-  "type": "module",
   "description": "This is a app to run Puppeteer scripts/tests.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker-build": "docker build --network host -t asia.gcr.io/qualified-glow-175508/chrombie .",
+    "docker-push": "docker push asia.gcr.io/qualified-glow-175508/chrombie"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "jest": "^29.5.0",
+    "jest-puppeteer": "^9.0.0",
+    "node-cmd": "^5.0.0",
     "puppeteer": "19.2.2"
   }
 }
